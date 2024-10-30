@@ -9,6 +9,7 @@ import { errorLogger } from "./middleware/error-logger-middleware.js";
 import { performanceMonitor } from "./middleware/performance-monitor-middleware.js";
 import { limiter } from "./middleware/rate-limiter-middleware.js";
 import { requestLogger } from "./middleware/request-logger-middleware.js";
+import authRoutes from "./routes/auth-routes.js"
 
 // ========================================CONFIGARATIONS========================================
 dotenv.config();
@@ -27,9 +28,8 @@ app.use(performanceMonitor)
 app.use(limiter)
 
 // ============================================ROUTES============================================
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Hi i'm from the server" });
-});
+
+app.use("/api/auth",authRoutes)
 
 // =============================================HANDLERS=============================================
 app.use(errorHandler);
