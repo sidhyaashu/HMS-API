@@ -97,7 +97,7 @@ A comprehensive Healthcare Management System designed to enhance user experience
 ### Installation
 1. Clone the repository:
 ```bash
-   git clone https://github.com/yourusername/healthcare-management-system.git
+https://github.com/sidhyaashu/HMS-API.git
 ```
 
 
